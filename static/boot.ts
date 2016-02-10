@@ -1,3 +1,6 @@
+require('expose?$!expose?jQuery!jquery');
+require('bootstrap-webpack');
+
 import 'angular2/bundles/angular2-polyfills';
 import { bootstrap } from 'angular2/platform/browser';
 import { App } from './App';
@@ -9,7 +12,7 @@ import {ToastOptions} from 'ng2-toastr/ng2-toastr';
 
 let options = {
   autoDismiss: true,
-  positionClass: 'toast-top-center',
+  positionClass: 'toast-top-right',
 };
 
 const provider = require('ng2-redux').provider;

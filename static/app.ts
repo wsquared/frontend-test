@@ -1,4 +1,5 @@
 /// <reference path="../typings/main.d.ts" />
+require('./app.css');
 
 import { Component, Inject } from 'angular2/core';
 import { Counter } from './immutables/counter';

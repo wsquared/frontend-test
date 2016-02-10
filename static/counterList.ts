@@ -1,4 +1,6 @@
 /// <reference path="../typings/main.d.ts" />
+require('./counterList.css');
+
 import { Component, Inject, Input } from 'angular2/core';
 import { increment, decrement, deleteCounter, loadCounters } from './actions/counterAction';
 import { incrementTotal, decrementTotal, decreaseTotal } from './actions/totalAction';

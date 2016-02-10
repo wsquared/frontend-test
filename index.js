@@ -28,12 +28,12 @@ function sendFile(name) {
 app.get("/", sendFile("index.html"));
 app.get("/counterList.html", sendFile("counterList.html"));
 app.get("/app.html", sendFile("app.html"));
-app.get("/bundle.js", sendFile("bundle.js"));
-app.get("/libs/bootstrap.js", sendFile("/libs/bootstrap.js"));
-app.get("/libs/bootstrap.css", sendFile("/libs/bootstrap.css"));
-app.get("/libs/font-awesome.css", sendFile("/libs/font-awesome.css"));
-app.get("/libs/jquery.js", sendFile("/libs/jquery.js"));
 app.get("/app.css", sendFile("app.css"));
+app.get("/libs/ng2-toastr.js", sendFile("/libs/ng2-toastr.js"));
+app.get("/libs/ng2-toastr.min.css", sendFile("./libs/ng2-toastr.min.css"));
+app.get("/libs/system.js", sendFile("/libs/system.js"));
+app.get("/bundle.js", sendFile("bundle.js"));
+app.get("/libs/font-awesome.css", sendFile("/libs/font-awesome.css"));
 app.get("/fonts/fontawesome-webfont.woff2", sendFile("/fonts/fontawesome-webfont.woff2"));
 app.get("/fonts/fontawesome-webfont.woff", sendFile("/fonts/fontawesome-webfont.woff"));
 app.get("/fonts/fontawesome-webfont.ttf", sendFile("/fonts/fontawesome-webfont.ttf"));
