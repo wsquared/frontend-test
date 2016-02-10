@@ -1,4 +1,4 @@
-let BASE_URL = 'http://localhost:3000';
+let BASE_URL = 'http://localhost:3100';
 
 export const GET_COUNTERS = BASE_URL + '/api/v1/counters';
 export const SAVE_COUNTERS = BASE_URL + '/api/v1/counters';

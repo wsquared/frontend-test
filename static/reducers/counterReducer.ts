@@ -1,4 +1,5 @@
 /// <reference path="../../typings/main.d.ts" />
+
 import { List } from 'immutable';
 import {
 INCREMENT_COUNTER,
@@ -12,23 +13,25 @@ import { Counter } from '../immutables/counter';
 export default function(state: List<Counter>, action) {
   switch (action.type) {
     case INCREMENT_COUNTER:
-      let incrementCounter: Counter = state.get(action.counter.id);
+      let incIndex = state.findIndex((counter) => counter.id === action.counter.id);
+      let incrementCounter: Counter = state.get(incIndex);
       return state.set(
-        incrementCounter.id,
+        incIndex,
         new Counter({
           id: incrementCounter.id,
           title: incrementCounter.title,
-          currentCount: incrementCounter.currentCount += 1
+          currentCount: incrementCounter.currentCount + 1
         })
       );
     case DECREMENT_COUNTER:
-      let decrementCounter: Counter = state.get(action.counter.id);
+      let decIndex = state.findIndex((counter) => counter.id === action.counter.id);
+      let decrementCounter: Counter = state.get(decIndex);
       return state.set(
-        decrementCounter.id,
+        decIndex,
         new Counter({
           id: decrementCounter.id,
           title: decrementCounter.title,
-          currentCount: decrementCounter.currentCount -= 1
+          currentCount: decrementCounter.currentCount - 1
         })
       );
     case LOAD_COUNTERS:
