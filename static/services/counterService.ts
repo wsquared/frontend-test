@@ -1,4 +1,4 @@
-import { Http } from 'angular2/http';
+import { Http, Headers } from 'angular2/http';
 import { Injectable } from 'angular2/core';
 
 import {
@@ -22,15 +22,21 @@ export class CounterService {
   }
 
   saveCounter(newCounter: Counter) {
-    return this.http.post(SAVE_COUNTERS, JSON.stringify(newCounter.toJS()));
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(SAVE_COUNTERS, JSON.stringify(newCounter.toJS()), { headers: headers });
   }
 
   incrementCounter(counter: Counter) {
-    return this.http.post(INCREMENT_COUNTER, JSON.stringify(counter.toJS()));
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(INCREMENT_COUNTER, JSON.stringify(counter.toJS()), { headers: headers });
   }
 
   decrementCounter(counter: Counter) {
-    return this.http.post(DECREMENT_COUNTER, JSON.stringify(counter.toJS()));
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(DECREMENT_COUNTER, JSON.stringify(counter.toJS()), { headers: headers });
   }
 
   deleteCounter(counter: Counter) {
