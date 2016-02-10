@@ -45,7 +45,11 @@ gulp.task('copy-libs', function () {
   return gulp.src(['./node_modules/bootstrap/dist/js/bootstrap.js',
     './node_modules/bootstrap/dist/css/bootstrap.css',
     './node_modules/jquery/dist/jquery.js',
-    './node_modules/font-awesome/css/font-awesome.css'])
+    './node_modules/font-awesome/css/font-awesome.css',
+    './node_modules/ng2-toastr/bundles/ng2-toastr.js',
+    './node_modules/ng2-toastr/bundles/ng2-toastr.min.css',
+    './node_modules/systemjs/dist/system.js'
+    ])
     .pipe(gulp.dest('./dist/libs'))
     ;
 });

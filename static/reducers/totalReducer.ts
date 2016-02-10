@@ -3,6 +3,7 @@
 import {
 INCREMENT_TOTAL,
 DECREMENT_TOTAL,
+DECREASE_TOTAL,
 SET_TOTAL,
 } from '../actions/totalAction';
 
@@ -14,6 +15,8 @@ export default function(state: number = 0, action) {
       return state -= 1;
     case SET_TOTAL:
       return state = action.total;
+    case DECREASE_TOTAL:
+      return state -= action.total;
     default:
       return state;
   }
