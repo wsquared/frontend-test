@@ -8,7 +8,6 @@ export const DECREMENT_COUNTER:string = 'DECREMENT_COUNTER';
 export const LOAD_COUNTERS:string = 'LOAD_COUNTERS';
 export const TOTAL_COUNTERS:string = 'TOTAL_COUNTERS';
 export const DELETE_COUNTER:string = 'DELETE_COUNTER';
-export const SAVE_COUNTER:string = 'SAVE_COUNTER';
 
 export function increment(counter: Counter) {
   return {
@@ -28,13 +27,6 @@ export function loadCounters(counterList: List<Counter>) {
   return {
     type: LOAD_COUNTERS,
     counterList: counterList
-  };
-}
-
-export function saveCounter(counter: Counter) {
-  return {
-    type: SAVE_COUNTER,
-    counter: counter
   };
 }
 

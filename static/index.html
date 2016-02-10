@@ -4,15 +4,26 @@
 <head>
   <title>Counter Test</title>
   <link rel="stylesheet" href="./app.css" type="text/css">
+  <link rel="stylesheet" href="./counterList.css" type="text/css">
   <link rel="stylesheet" href="./libs/bootstrap.css" type="text/css">
   <link rel="stylesheet" href="./libs/font-awesome.css" type="text/css">
+  <link rel="stylesheet" href="./libs/ng2-toastr.min.css" type="text/css">
 </head>
 
 <body class="container-fluid">
-  <app></app>
+  <div class="jumbotron">
+    <app>
+    <div class="text-center">
+      <h2>Loading... please wait</h2>
+      <i class="fa fa-refresh fa-spin fa-5x"></i>
+    </div>
+    </app>
+  </div>
   <script src="./libs/jquery.js"></script>
+  <script src="./libs/system.js"></script>
   <script src="./libs/bootstrap.js"></script>
   <script src="./bundle.js"></script>
+  <script src="./libs/ng2-toastr.js"></script>
 </body>
 
 </html>

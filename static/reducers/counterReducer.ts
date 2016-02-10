@@ -5,8 +5,7 @@ import {
 INCREMENT_COUNTER,
 DECREMENT_COUNTER,
 LOAD_COUNTERS,
-DELETE_COUNTER,
-SAVE_COUNTER
+DELETE_COUNTER
 } from '../actions/counterAction';
 import { Counter } from '../immutables/counter';
 
@@ -40,8 +39,6 @@ export default function(state: List<Counter>, action) {
     case DELETE_COUNTER:
       let counterIndex = state.findIndex((counter) => counter.id === action.counter.id);
       return List(state.delete(counterIndex));
-    case SAVE_COUNTER:
-      return List(state.push(action.counter));
     default:
       return List(state);
   }
