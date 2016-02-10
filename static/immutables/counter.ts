@@ -3,19 +3,19 @@
 import { Record } from 'immutable';
 
 const CounterRecord = Record({
-    id: 0,
-    title: '',
-    currentCount: 0
+  id: 0,
+  title: '',
+  currentCount: 0
 });
 
 export class Counter extends CounterRecord {
 
-    id:number;
-    title:string;
-    currentCount:number;
+  id: number;
+  title: string;
+  currentCount: number;
 
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
 }

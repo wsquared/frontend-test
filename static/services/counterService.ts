@@ -22,15 +22,15 @@ export class CounterService {
   }
 
   saveCounter(newCounter: Counter) {
-    return this.http.post(SAVE_COUNTERS, JSON.stringify(newCounter));
+    return this.http.post(SAVE_COUNTERS, JSON.stringify(newCounter.toJS()));
   }
 
   incrementCounter(counter: Counter) {
-    return this.http.post(INCREMENT_COUNTER, JSON.stringify(counter));
+    return this.http.post(INCREMENT_COUNTER, JSON.stringify(counter.toJS()));
   }
 
   decrementCounter(counter: Counter) {
-    return this.http.post(DECREMENT_COUNTER, JSON.stringify(counter));
+    return this.http.post(DECREMENT_COUNTER, JSON.stringify(counter.toJS()));
   }
 
   deleteCounter(counter: Counter) {

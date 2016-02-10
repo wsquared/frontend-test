@@ -1,11 +1,16 @@
 /// <reference path="../../typings/main.d.ts" />
 
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import counter from '../reducers/counterReducer';
+import total from '../reducers/totalReducer';
+
 const thunk = require('redux-thunk');
-import counterReducer from '../reducers/counterReducer';
+const rootReducer = combineReducers({
+  counter, total
+});
 
 const finalCreateStore = applyMiddleware(thunk)(createStore);
 
 export default () => {
-  return finalCreateStore(counterReducer);
+  return finalCreateStore(rootReducer);
 }
