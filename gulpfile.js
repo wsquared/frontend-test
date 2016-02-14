@@ -3,7 +3,7 @@ var gulpLoadPlugins = require('gulp-load-plugins');
 var plugins = gulpLoadPlugins();
 var rimraf = require('gulp-rimraf');
 var webpack = require('webpack-stream');
-var PORT = 3000;
+var PORT = 5000;
 
 gulp.task('connect', function () {
   plugins.connect.server({

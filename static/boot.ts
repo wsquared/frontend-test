@@ -1,5 +1,6 @@
 require('expose?$!expose?jQuery!jquery');
 require('bootstrap-webpack');
+require('tslint');
 
 import 'angular2/bundles/angular2-polyfills';
 import { bootstrap } from 'angular2/platform/browser';

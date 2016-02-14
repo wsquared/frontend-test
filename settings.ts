@@ -1,4 +1,4 @@
-let BASE_URL = 'http://localhost:3100';
+let BASE_URL = 'http://localhost:3000';
 let COUNTER_URL = '/api/v1/counter';
 
 export const GET_COUNTERS = BASE_URL + COUNTER_URL + 's';

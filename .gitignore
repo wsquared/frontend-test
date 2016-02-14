@@ -1,4 +1,8 @@
 /node_modules
 /dist
 /typings
+/static/**/*.js
 npm-debug.log
+unit-tests.html
+settings.js
+*.map

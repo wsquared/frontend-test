@@ -5,13 +5,17 @@ var app = express();
 var bodyParser = require("body-parser");
 var compression = require("compression");
 var morgan = require("morgan");
-var PORT = Number(process.env.PORT || 3100);
+var PORT = Number(process.env.PORT || 3000);
 var Counters = require("./lib/Counters");
 
 app.use(morgan("combined"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(compression());
+
+// We wouldn't be enabling cross origin in production, but we are doing so
+// so we can have a front end server and backend server running at the same
+// time for development purposes
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
