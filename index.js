@@ -31,6 +31,7 @@ function sendFile(name) {
 
 app.get("/", sendFile("index.html"));
 app.get("/counterList.html", sendFile("counterList.html"));
+app.get("/counterList.css", sendFile("counterList.css"));
 app.get("/app.html", sendFile("app.html"));
 app.get("/app.css", sendFile("app.css"));
 app.get("/libs/ng2-toastr.js", sendFile("/libs/ng2-toastr.js"));

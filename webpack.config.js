@@ -22,7 +22,17 @@ module.exports = {
       }
     ],
     loaders: [
-      { test: /\.tsx?$/, loader: 'ts-loader' },
+      { test: /\.async\.ts$/, loaders: ['es6-promise-loader', 'ts-loader'], exclude: [/\.(spec|e2e)\.ts$/] },
+      
+      // Support for .ts files.
+      { test: /\.ts$/, loader: 'ts-loader', exclude: [/\.(spec|e2e|async)\.ts$/] },
+
+      // Support for *.json files.
+      { test: /\.json$/, loader: 'json-loader' },
+
+      // support for .html as raw text
+      { test: /\.html$/, loader: 'raw-loader', exclude: [root('statuc/index.html')] },
+      
       // the url-loader uses DataUrls.
       // the file-loader emits files.
       { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
@@ -30,9 +40,7 @@ module.exports = {
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
       { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml' },
       // css
-      { test: /\.css$/, loader: "style-loader!css-loader" },
-      { test: /\.png$/, loader: "url-loader?limit=100000" },
-      { test: /\.jpg$/, loader: "file-loader" },
+      { test: /\.css$/, loader: "style-loader!css-loader" }
     ],
     noParse: [/zone\.js\/dist\/.+/, /angular2\/bundles\/.+/]
   }

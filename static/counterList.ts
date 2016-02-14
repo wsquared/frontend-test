@@ -69,17 +69,20 @@ export class CounterList {
 
   addCounter($event, title: string) {
     $event.preventDefault();
+
+    if (!title) return;
+
     this.counterService.saveCounter(new Counter({
       title: title
     }))
-    .subscribe(
+      .subscribe(
       res => {
         let counterList = (<List<Counter>>res.json()).map((counter: any) =>
           new Counter({ id: counter.id, title: counter.title, currentCount: counter.currentCount }));
         this.store.dispatch(loadCounters(List<Counter>(counterList)));
         this.toastr.success('Created ' + title, 'Saved.');
       }
-    )
-    ;
+      )
+      ;
   }
 }

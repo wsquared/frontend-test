@@ -41,7 +41,7 @@ gulp.task('copy', function () {
     ;
 });
 
-gulp.task('copy-libs', function () {
+gulp.task('node_modules', function () {
   return gulp.src([
     './node_modules/font-awesome/css/font-awesome.css',
     './node_modules/ng2-toastr/bundles/ng2-toastr.js',
@@ -81,5 +81,5 @@ gulp.task('dev', function (cb) {
 });
 
 gulp.task('default', function (cb) { 
-  plugins.runSequence(['js', 'html', 'copy', 'copy-libs', 'fonts', 'lib'], cb);
+  plugins.runSequence(['js', 'html', 'copy', 'node_modules', 'fonts', 'lib'], cb);
 });
