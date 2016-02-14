@@ -12,7 +12,9 @@
   "files": [
     "./static/boot.ts",
     "./static/app.ts",
+    "./static/app.spec.ts",
     "./static/counterList.ts",
+    "./static/counterList.spec.ts",
     "./static/services/counterService.ts",
     "./static/services/counterService.spec.ts",
     "./static/actions/counterAction.ts",
