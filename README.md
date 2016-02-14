@@ -23,3 +23,12 @@ Browse to http://localhost:3000.
 ### Cleaning the dist folder
 
 - npm clean
+
+### Technologies used
+
+- Angular 2
+- Redux
+- Bootstrap
+- Gulp
+- Webpack
+- Typescript
