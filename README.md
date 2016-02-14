@@ -32,3 +32,4 @@ Browse to http://localhost:3000.
 - Gulp
 - Webpack
 - Typescript
+- ImmutableJs
