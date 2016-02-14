@@ -102,7 +102,7 @@ describe('CounterService', () => {
           new ResponseOptions({
             body: [
               {
-                id: 26,
+                id: 27,
                 title: 'John Smith',
                 currentCount: 6
               }]
@@ -110,12 +110,12 @@ describe('CounterService', () => {
           )));
       });
 
-    counterService.saveCounter(counter).subscribe(
+    counterService.incrementCounter(counter).subscribe(
       response => {
         var counterList = (<List<Counter>>response.json()).map((counter: any) =>
           new Counter({ id: counter.id, title: counter.title, currentCount: counter.currentCount }));
 
-        expect(counterList[0].id).toBe(26);
+        expect(counterList[0].id).toBe(27);
         expect(counterList[0].title).toBe('John Smith');
         expect(counterList[0].currentCount).toBe(6);
       }
@@ -132,7 +132,7 @@ describe('CounterService', () => {
           new ResponseOptions({
             body: [
               {
-                id: 26,
+                id: 25,
                 title: 'John Smith',
                 currentCount: 4
               }]
@@ -140,12 +140,12 @@ describe('CounterService', () => {
           )));
       });
 
-    counterService.saveCounter(counter).subscribe(
+    counterService.decrementCounter(counter).subscribe(
       response => {
         var counterList = (<List<Counter>>response.json()).map((counter: any) =>
           new Counter({ id: counter.id, title: counter.title, currentCount: counter.currentCount }));
 
-        expect(counterList[0].id).toBe(26);
+        expect(counterList[0].id).toBe(25);
         expect(counterList[0].title).toBe('John Smith');
         expect(counterList[0].currentCount).toBe(4);
       }
