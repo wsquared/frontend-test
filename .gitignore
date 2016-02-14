@@ -3,6 +3,8 @@
 /typings
 /static/**/*.js
 /coverage
+/.idea
+/.vscode
 npm-debug.log
 unit-tests.html
 settings.js

@@ -3,11 +3,10 @@
 import { List } from 'immutable';
 import { Counter } from '../immutables/counter';
 
-export const INCREMENT_COUNTER:string = 'INCREMENT_COUNTER';
-export const DECREMENT_COUNTER:string = 'DECREMENT_COUNTER';
-export const LOAD_COUNTERS:string = 'LOAD_COUNTERS';
-export const TOTAL_COUNTERS:string = 'TOTAL_COUNTERS';
-export const DELETE_COUNTER:string = 'DELETE_COUNTER';
+export const INCREMENT_COUNTER: string = 'INCREMENT_COUNTER';
+export const DECREMENT_COUNTER: string = 'DECREMENT_COUNTER';
+export const LOAD_COUNTERS: string = 'LOAD_COUNTERS';
+export const DELETE_COUNTER: string = 'DELETE_COUNTER';
 
 export function increment(counter: Counter) {
   return {
@@ -34,12 +33,5 @@ export function deleteCounter(counter: Counter) {
   return {
     type: DELETE_COUNTER,
     counter: counter
-  };
-}
-
-export function totalCounters(counterList: List<Counter>) {
-  return {
-    type: TOTAL_COUNTERS,
-    counterList: counterList
   };
 }

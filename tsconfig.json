@@ -18,7 +18,9 @@
     "./static/actions/counterAction.ts",
     "./static/actions/totalAction.ts",
     "./static/reducers/counterReducer.ts",
+    "./static/reducers/counterReducer.spec.ts",
     "./static/reducers/totalReducer.ts",
+    "./static/reducers/totalReducer.spec.ts",
     "./static/stores/configureStore.ts",
     "./static/immutables/counter.ts",
     "./settings.ts"
