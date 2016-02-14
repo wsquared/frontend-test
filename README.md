@@ -1,12 +1,25 @@
-# Prerequisites
+## SITEPOINT FRONTEND TEST ANSWER
 
-NodeJs version 5.5.0
+### Prerequisites
 
-# GETTING STARTED
 
-Run the following commands in order:
+- NodeJs version 5.6.0
 
-1. npm install
-2. npm start
 
-In your browsers, goto http://localhost:3000.
+### Running the counter application
+
+From your command line, execute the following commands in order:
+
+- npm install
+- npm start
+
+Browse to http://localhost:3000.
+
+### Running Tests
+
+- npm install (if you haven't already)
+- npm test
+
+### Cleaning the dist folder
+
+- npm clean

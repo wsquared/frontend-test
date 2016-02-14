@@ -9,8 +9,7 @@
     "dev": "gulp dev",
     "clean": "rimraf dist",
     "test": "karma start",
-    "postinstall": "typings install",
-    "tsc": "tsc"
+    "postinstall": "typings install"
   },
   "keywords": [
     "sitepoint"
