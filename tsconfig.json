@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": ".",
     "target": "es5",
-    "sourceMap": false,
+    "sourceMap": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
@@ -14,6 +14,7 @@
     "./static/app.ts",
     "./static/app.spec.ts",
     "./static/counterList.ts",
+    "./static/counterList.spec.ts",
     "./static/services/counterService.ts",
     "./static/services/counterService.spec.ts",
     "./static/actions/counterAction.ts",
