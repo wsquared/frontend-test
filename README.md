@@ -1,3 +1,4 @@
+https://travis-ci.org/wsquared/frontend-test.svg?branch=master
 ## SITEPOINT FRONTEND TEST ANSWER
 
 ### Prerequisites
