@@ -69,9 +69,7 @@ export class CounterList {
 
   addCounter($event, title: string) {
     $event.preventDefault();
-
     if (!title) return;
-
     this.counterService.saveCounter(new Counter({
       title: title
     }))

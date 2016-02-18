@@ -43,24 +43,24 @@ describe('App', () => {
     CounterService
   ]);
 
-  it('should return counter state', inject([App, CounterService, ToastsManager],
-    (app, counterService, toast) => {
+  it('should return counter state', inject([App, CounterService],
+    (app, counterService) => {
 
       let state = app.store.getState();
 
       expect(state.counter).toBe(List<Counter>());
     }));
 
-  it('should return total state', inject([App, CounterService, ToastsManager],
-    (app, counterService, toast) => {
+  it('should return total state', inject([App, CounterService],
+    (app, counterService) => {
 
       let state = app.store.getState();
 
       expect(state.total).toEqual(0);
     }));
 
-  it('should sum the counterList', inject([App, CounterService, ToastsManager],
-    (app, counterService, toast) => {
+  it('should sum the counterList', inject([App, CounterService],
+    (app, counterService) => {
 
       let result = app.sum([{ currentCount: 1 }, { currentCount: 5 }]);
 
