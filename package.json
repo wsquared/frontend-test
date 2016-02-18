@@ -92,7 +92,7 @@
     "ts-node": "0.5.5",
     "tsconfig-lint": "^0.5.0",
     "tsd": "0.6.5",
-    "tslint": "3.3.0",
+    "tslint": "^3.3.0",
     "tslint-loader": "2.1.0",
     "typescript": "1.7.5",
     "typings": "0.6.6",
