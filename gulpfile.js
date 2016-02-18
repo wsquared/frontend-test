@@ -80,6 +80,10 @@ gulp.task('dev', function (cb) {
   plugins.runSequence(['default', 'connect', 'watch'], 'open', cb);
 });
 
+gulp.task('build', function (cb) { 
+  plugins.runSequence(['js'], cb);
+});
+
 gulp.task('default', function (cb) { 
   plugins.runSequence(['js', 'html', 'copy', 'node_modules', 'fonts', 'lib'], cb);
 });
