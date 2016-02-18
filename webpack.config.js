@@ -8,7 +8,7 @@ module.exports = {
   debug: false,
   resolve: {
     modulesDirectories: ['node_modules'],
-    root: 'static',
+    root: './static',
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.js'],
   },
   module: {

@@ -14,7 +14,7 @@ gulp.task('connect', function () {
 });
 
 gulp.task('js', function () {
-  return gulp.src('static/app.ts')
+  return gulp.src('./static/app.ts')
     .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest('./dist'))
     .pipe(plugins.connect.reload())
@@ -78,10 +78,6 @@ gulp.task('watch', function () {
 
 gulp.task('dev', function (cb) {
   plugins.runSequence(['default', 'connect', 'watch'], 'open', cb);
-});
-
-gulp.task('build', function (cb) { 
-  plugins.runSequence(['js'], cb);
 });
 
 gulp.task('default', function (cb) { 
