@@ -4,7 +4,7 @@
       <div class="col-xs-12">
         <div class="col-xs-12 input-group-big-padding-theme">
           <div class="input-group">
-            <input #title type="text" class="form-control" placeholder="Add counter" (keyup.enter)="addCounter($event, title.value)">
+            <input #title type="text" class="form-control input-group-item" placeholder="Add counter" (keyup.enter)="addCounter($event, title.value)">
             <span class="input-group-btn">
             <button class="btn btn-success" type="button" (click)="addCounter($event, title.value)"><i class="fa fa-plus"></i></button>
           </span>
