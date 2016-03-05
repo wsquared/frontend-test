@@ -5,7 +5,8 @@ module.exports = {
   output: {
     filename: 'bundle.js'
   },
-  debug: false,
+  devtool: 'source-map',
+  debug: true,
   resolve: {
     modulesDirectories: ['node_modules'],
     root: './static',
@@ -23,7 +24,7 @@ module.exports = {
     ],
     loaders: [
       { test: /\.async\.ts$/, loaders: ['es6-promise-loader', 'ts-loader'], exclude: [/\.(spec|e2e)\.ts$/] },
-      
+
       // Support for .ts files.
       { test: /\.ts$/, loader: 'ts-loader', exclude: [/\.(spec|e2e|async)\.ts$/] },
 
@@ -32,7 +33,7 @@ module.exports = {
 
       // support for .html as raw text
       { test: /\.html$/, loader: 'raw-loader', exclude: [root('statuc/index.html')] },
-      
+
       // the url-loader uses DataUrls.
       // the file-loader emits files.
       { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
